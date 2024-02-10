@@ -1,0 +1,94 @@
+body {
+    background: rgb(250,240,235);
+    flex-direction: column;
+    display: flex;
+    height: 100vh;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.card-container {
+    display: grid;
+    margin: 0 2em;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.character-container {
+    padding: 5em;
+    display: grid;
+    grid-template-rows: 1fr 0.2fr 1fr;
+
+}
+* {
+    /* outline: 1px solid blue; */
+}
+
+.image-container {
+    border: 1px solid rgb(255,205,145);
+    border-radius: 5px;
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+input {
+    font-size: 1.2rem;
+}
+
+.tags-container {
+
+            display: inline-block;
+            position: relative;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 5px;
+            box-shadow: 2px 2px 5px #00000033;
+            width: 90%;
+}
+
+.tags {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+.tags > li {
+    display: inline-block;
+     background-color: #f2f2f2;
+            color: #333;
+            border-radius: 20px;
+            padding: 5px 10px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+}
+
+.tags-input {
+    background-color: transparent;
+}
+
+.tags-input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 14px;
+
+}
+.tags-input[type="text"]:focus {
+    outline: none;
+}
+
