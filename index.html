@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="styles.css" type="text/css">
     <script type="text/javascript" src="main.js" defer></script>
 </head>
-
 <body>
     <h1>Character creation</h1>
     <div class="card-container">
@@ -22,7 +21,7 @@
 
         <div class="image-container"><img alt="" src="assets/images/character1.jpg" /> </div>
         <h2 class="name-title">name</h2>
-        <form>
+        <form class="characterForm">
             <input placeholder="name" class="name" name="name" type="text" />
             <input placeholder="age" type="text" name="age"  />
             <input placeholder="class" type="text" name="class"  />
@@ -37,7 +36,7 @@
     <section class="character-container">
         <div class="image-container"><img alt="" src="assets/images/character2.jpg" /> </div>
         <h2 class="name-title">name</h2>
-        <form>
+        <form class="characterForm">
             <input placeholder="name" class="name" name="name" type="text" />
             <input placeholder="age" type="text" name="age"  />
             <input placeholder="class" type="text" name="class"  />
@@ -52,7 +51,7 @@
     <section class="character-container">
         <div class="image-container"><img alt="" src="assets/images/character3.jpg" /> </div>
         <h2 class="name-title">name</h2>
-        <form>
+        <form class="characterForm">
             <input placeholder="name" class="name" name="name" type="text" />
             <input placeholder="age" type="text" name="age"  />
             <input placeholder="class" type="text" name="class"  />
@@ -64,6 +63,25 @@
         </form>
 
     </section>
+    <div class="generate-container">
+        <button class="generate-button" id="generateButton">Generate Abomination</button>
+    </div>
+    </div>
+    <div class="doppelganger-container">
+        <div class="profile-info">
+            <img class="dopel-image" alt="" src="assets/images/character1.jpg" />
+            <p class="dopel-name">doppelganger</p>
+        </div>
+        <div class="skills-info">
+            <div class="dopel-class">
+                <p class="dopel-class-title">class</p>
+                <ul class="dopel-class-list">he</ul>
+            </div>
+            <div class="dopel-skills">
+                <p class="dopel-skills-title">skills</p>
+                <ul class="dopel-skills-list">ha</ul>
+            </div>
+        </div>
     </div>
 
 </body>

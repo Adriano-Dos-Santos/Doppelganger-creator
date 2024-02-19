@@ -1,5 +1,7 @@
 const cardContainer = document.querySelector('.card-container');
+const form = document.querySelector('.characterForm');
 
+// Tag list implementation
 cardContainer.addEventListener('keydown', function (event){
   if (event.key === 'Enter') {
   if (event.target.classList.contains('tags-input')) {
@@ -19,10 +21,8 @@ cardContainer.addEventListener('keydown', function (event){
     event.target.value = '';
     };
   }
-  }
-  ;
+  };
 });
-
 
 // tag list delete button
 cardContainer.addEventListener('click', function (event) {

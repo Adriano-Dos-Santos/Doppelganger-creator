@@ -12,12 +12,14 @@ body {
     display: grid;
     margin: 0 2em;
     grid-template-columns: 1fr 1fr 1fr;
+    outline: 2px solid red;
 }
 .character-container {
     padding: 5em;
     display: grid;
     grid-template-rows: 1fr 0.2fr 1fr;
 }
+
 * {
     /* outline: 1px solid blue; */
 }
@@ -107,4 +109,34 @@ input {
 }
 .delete-button:hover {
     background: rgb(220,220,220);
+}
+
+.doppelganger-container {
+    display: flex;
+}
+
+.profile-info {
+    flex-basis: 40%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dopel-image {
+    max-width: 60%;
+}
+
+.dopel-name {
+    text-align: center;
+    font-size: 1.3rem;
+    background: rgb(210,210,210);
+    padding: 1em;
+    border-radius: 20px;
+}
+.skills-info {
+    flex-basis: 60%;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
 }
