@@ -12,16 +12,11 @@ body {
     display: grid;
     margin: 0 2em;
     grid-template-columns: 1fr 1fr 1fr;
-    outline: 2px solid red;
 }
 .character-container {
     padding: 5em;
     display: grid;
     grid-template-rows: 1fr 0.2fr 1fr;
-}
-
-* {
-    /* outline: 1px solid blue; */
 }
 
 
@@ -111,8 +106,30 @@ input {
     background: rgb(220,220,220);
 }
 
+
+
+/* generate button */
+
+
+.generate-button {
+    padding: 1em 2em;
+    border-radius: 10px;
+    background: rgb(150,110,70);
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+
+
+/* doppelganger CONTAINER */
+
 .doppelganger-container {
     display: flex;
+    background-color: rgb(200,200,200);
+    border-radius: 20px;
+    max-width:  80%;
+    margin: 3em auto 0 auto;
 }
 
 .profile-info {
@@ -124,19 +141,45 @@ input {
     align-items: center;
 }
 .dopel-image {
-    max-width: 60%;
+    max-width: 70%;
+    border-radius: 10px;
 }
 
 .dopel-name {
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     background: rgb(210,210,210);
     padding: 1em;
     border-radius: 20px;
+    color: black;
 }
 .skills-info {
     flex-basis: 60%;
     display: flex;
-    justify-content: space-around;
-    border: 1px solid black;
+    justify-content: center;
+    gap: 1em;
+    padding: 2em;
+
+}
+
+.dopel-class,
+.dopel-skills {
+    background: rgb(240,200,200);
+    flex-basis: 50%;
+    padding: 0.5em 0em;
+
+}
+
+.dopel-info-title {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    background: black;
+    color: gold;
+}
+
+.list {
+    background: rgb(240,170,170);
+    width: 85%;
+    margin: 0 auto;
 }
