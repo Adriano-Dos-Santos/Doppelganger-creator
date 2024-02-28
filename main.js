@@ -1,5 +1,4 @@
 const cardContainer = document.querySelector('.card-container');
-const form = document.querySelector('.characterForm');
 
 // Tag list implementation
 cardContainer.addEventListener('keydown', function (event){
@@ -63,3 +62,13 @@ cardContainer.addEventListener('keydown', function (event) {
     }
   }
 });
+
+// FORM DATA RETRIVAL
+
+const form = document.querySelector('.characterForm');
+const formF = document.forms[0];
+
+formF.addEventListener('submit', () => {
+  event.preventDefault();
+});
+
