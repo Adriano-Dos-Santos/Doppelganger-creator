@@ -44,14 +44,7 @@ form {
     justify-content: top;
     gap: 1em;
 }
-form > button {
-    width: 50%;
-    margin: 0 auto;
-    padding: 0.4em 1em;
-    border-radius: 10px;
     font-size: 1.2rem;
-}
-
 input {
     font-size: 1.2rem;
     width: 90%;
@@ -99,9 +92,12 @@ input {
     outline: none;
 }
 .delete-button {
+    width: 20px;
+    height: 20px;
     border: none;
-    border-radius: 50%;
-    margin-left: 0,5em;
+    border-radius: 10px;
+    margin-left: 0.5em;
+    padding: 0;
     background-color: transparent;
 }
 .delete-button:hover {
@@ -109,9 +105,12 @@ input {
 }
 
 .send-character-button {
+    width: 50%;
+    margin: 0 auto;
     padding: 0.4em 1em;
-    text-align: center;
-    max-width: 70%;
+    border-radius: 10px;
+    background-color: rgb(240,190,190);
+    font-size: 1.2rem;
 }
 
 
@@ -137,6 +136,7 @@ input {
     max-width:  80%;
     margin: 3em auto 0 auto;
     border: 1px solid rgb(220,220,220);
+    box-shadow: inset 0px 0px 20px 1px black;
 }
 
 .profile-info {
@@ -150,7 +150,8 @@ input {
 .dopel-image {
     max-width: 70%;
     border-radius: 10px;
-    box-shadow: 0px 20px 90px 20px;
+    box-shadow: 0px 20px 50px 5px;
+
 }
 
 .dopel-name {
@@ -159,7 +160,7 @@ input {
     font-family: sans-serif;
     padding: 0.5em 0.7em;
     border-radius: 10px;
-    background-image: linear-gradient(180deg, rgba(40,40,40) , rgba(150,150,150) 60%, rgba(230,230,230));
+    background-image: linear-gradient(180deg, rgba(40,40,40,0.3) , rgba(150,150,150) 60%, rgba(230,230,230));
     color: black;
     font-weight: 500;
 }
@@ -197,6 +198,9 @@ input {
 }
 
 @media screen and (max-width: 950px) {
+    body {
+        font-size: 0.9rem;
+    }
     .card-container {
         max-width: 50%;
         grid-template-columns: 1fr;
@@ -205,6 +209,17 @@ input {
     }
     .character-container {
         padding: 1em 3em;
+    }
+
+    .doppelganger-container {
+        flex-direction: column;
+        max-width: 65%;
+    }
+    .dopel-name {
+        font-size: 1.3rem;
+    }
+    .skills-info {
+        flex-direction: column;
     }
 
 }

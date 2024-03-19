@@ -65,10 +65,9 @@ cardContainer.addEventListener('keydown', function (event) {
 
 // FORM DATA RETRIVAL
 
-const form = document.querySelector('.characterForm');
-const formF = document.forms[0];
+const form = document.forms[0];
 
-formF.addEventListener('submit', () => {
+form.addEventListener('submit', () => {
   event.preventDefault();
 });
 
