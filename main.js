@@ -83,22 +83,35 @@ formsContainer.addEventListener('click', function (event) {
 formsContainer.addEventListener('click', function (event) {
   if (event.target.classList.contains('send-character-button')) {
     event.preventDefault();
-    const form = event.target.parentElement;
+    const button = event.target;
+    const form = button.parentElement;
+    // const formIndex = ??
     const elements = form.elements;
-    const skillList = form.querySelector('.tags').children;
 
     let nameValue = elements.name.value;
     let ageValue = elements.age.value;
     let classValue = elements.class.value;
 
+    const skillList = form.querySelector('.tags').children;
     let skillsValue = [];
     for (let child of skillList) {
       const value = child.childNodes[0].nodeValue.trim();
       skillsValue.push(value);
     }
+
+
+    characterData.push({ // add into form index position
+      characterName: nameValue,
+      age: ageValue,
+      class: classValue,
+      skills: skillsValue,});
+
+    button.style.pointerEvents = 'none';
+
     console.log(elements);
-    console.log(nameValue, ageValue, classValue);
-    console.log(skillList);
+    // console.log(nameValue, ageValue, classValue);
+    // console.log(skillList);
     console.log(skillsValue);
+    console.log(characterData);
   }
 });
