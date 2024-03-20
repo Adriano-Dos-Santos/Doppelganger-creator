@@ -65,10 +65,40 @@ cardContainer.addEventListener('keydown', function (event) {
 
 // FORM DATA RETRIVAL
 
-const form = document.forms[0];
+const forms = document.forms;
+const formsContainer = document.querySelector('.card-container');
 const characterData = [];
 
-form.addEventListener('submit', () => {
-  event.preventDefault();
+// send button confirm style
+formsContainer.addEventListener('click', function (event) {
+  if (event.target.classList.contains('send-character-button')) {
+    event.preventDefault();
+    const button = event.target;
+    button.style.backgroundColor = 'green';
+  }
 });
 
+// get form data
+
+formsContainer.addEventListener('click', function (event) {
+  if (event.target.classList.contains('send-character-button')) {
+    event.preventDefault();
+    const form = event.target.parentElement;
+    const elements = form.elements;
+    const skillList = form.querySelector('.tags').children;
+
+    let nameValue = elements.name.value;
+    let ageValue = elements.age.value;
+    let classValue = elements.class.value;
+
+    let skillsValue = [];
+    for (let child of skillList) {
+      const value = child.childNodes[0].nodeValue.trim();
+      skillsValue.push(value);
+    }
+    console.log(elements);
+    console.log(nameValue, ageValue, classValue);
+    console.log(skillList);
+    console.log(skillsValue);
+  }
+});

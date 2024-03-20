@@ -68,7 +68,6 @@ input {
 
 }
 .tags > li {
-    font-size: 0.85rem;
     display: inline-block;
      background-color: #f2f2f2;
             color: #333;
@@ -100,14 +99,9 @@ input {
     margin-left: 0.5em;
     padding: 0;
     background-color: transparent;
-    font-size: 0.6rem;
-    display: none;
 }
 .delete-button:hover {
     background: rgb(220,220,220);
-}
-.tags:hover .delete-button {
-    display: inline-block;
 }
 
 .send-character-button {
@@ -172,7 +166,43 @@ input {
 }
 .skills-info {
     flex-basis: 60%;
-    dimax-width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 2em;
+
+}
+
+.dopel-class,
+.dopel-skills {
+    background: rgb(220,210,210);
+    flex-basis: 50%;
+    padding: 0.5em 2em;
+    border-radius: 10px;
+
+}
+
+.dopel-info-title {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    background: white;
+    border-radius: 10px;
+    color: gold;
+}
+
+.list {
+    background: rgb(240,170,170);
+    width: 85%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 950px) {
+    body {
+        font-size: 0.9rem;
+    }
+    .card-container {
+        max-width: 50%;
         grid-template-columns: 1fr;
         margin: 0;
         padding: 0;
