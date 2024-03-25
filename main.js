@@ -23,13 +23,7 @@ cardContainer.addEventListener('keydown', function(event) {
   };
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 7112032 (forms data added to array of objects completed)
-=======
 // tag element delete button implementation
->>>>>>> 107312d (eddited comments)
 cardContainer.addEventListener('click', function(event) {
   if (event.target.classList.contains('delete-button')) {
     event.preventDefault();
@@ -106,16 +100,13 @@ formsContainer.addEventListener('click', function(event) {
 
     const formsCollection = Array.from(document.forms);
     const formIndex = formsCollection.indexOf(form);
-<<<<<<< HEAD
-=======
-    characterData.splice(formIndex, 0, { // add into form index position
->>>>>>> 7112032 (forms data added to array of objects completed)
-    characterName: nameValue,
+    characterData.splice(formIndex, 0, {
+      characterName: nameValue,
       age: ageValue,
-        class: classValue,
-          skills: skillsValue,
+      class: classValue,
+      skills: skillsValue,
     });
 
-button.style.pointerEvents = 'none';
+    button.style.pointerEvents = 'none';
   }
 });
