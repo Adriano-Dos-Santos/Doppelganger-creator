@@ -24,9 +24,12 @@ cardContainer.addEventListener('keydown', function(event) {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
-// tag element delete button
 >>>>>>> 7112032 (forms data added to array of objects completed)
+=======
+// tag element delete button implementation
+>>>>>>> 107312d (eddited comments)
 cardContainer.addEventListener('click', function(event) {
   if (event.target.classList.contains('delete-button')) {
     event.preventDefault();
