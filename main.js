@@ -55,7 +55,6 @@ cardContainer.addEventListener('keydown', function(event) {
     if (key === 'Backspace' && nameTitle.innerText !== 'name') {
       let newName = nameTitle.innerText.slice(0, -1);
       nameTitle.innerText = newName;
-      console.log(newName);
       if (nameTitle.innerText === '') {
         nameTitle.innerText = 'name';
       }
@@ -108,5 +107,50 @@ formsContainer.addEventListener('click', function(event) {
     });
 
     button.style.pointerEvents = 'none';
+    console.log(`character ${formIndex + 1} saved`);
   }
+});
+
+// create doppelganger
+
+const doppelganger = {};
+const generateButton = document.querySelector('#generateButton');
+
+function confirmCharacterData(data) {
+  let status = true;
+  for (let character of data) {
+       if (!character) {
+         status = false;
+       };
+    };
+  if (data.length !== 3) {
+      status = false;
+  };
+
+  console.log(status);
+  console.log(`confirmation ended`);
+  return status;
+};
+
+function errorWarning(status) {
+  if (status) {
+    return true;
+  } else {
+    const label = document.querySelector('.generate-button-label');
+    label.style.display = 'block';
+    label.textContent = 'please send all characters';
+    return false;
+  }
+
+};
+
+
+
+generateButton.addEventListener('click', () => {
+  console.log(`button clicked`);
+  if (errorWarning(confirmCharacterData(characterData))) {
+    const doppelgangerContainer = document.querySelector('.doppelganger-container');
+    doppelgangerContainer.style.display = 'flex';
+  };
+
 });
